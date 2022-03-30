@@ -30,7 +30,7 @@ public class Fact
             // You should output :  X! / (X - N)!
 
             result = fact1 / fact2;
-            coansole,write(result);
+            Console.Write(result);
 
 
 
