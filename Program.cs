@@ -4,35 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DifSum
+namespace monkey
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a = 0;
-            int b = 0;
-            int c;
             int n = int.Parse(Console.ReadLine());
+            string day = Console.ReadLine();
+            float funkiness = float.Parse(Console.ReadLine());
 
-            for (int i = 0; i <= n; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    a += i;
-                }
-                else
-                {
-                    b += i;
-                }
+            string m = "monkey";
+
+            if (day == "friday") {
+                m = "funky" + m + "fiday";
             }
-            c = a - b;
+            if (funkiness >= 7) {
+                m = m.ToUpper();
+            }
 
-            // Write an answer using Console.WriteLine()
-            // To debug: Console.Error.WriteLine("Debug messages...");
-
-            Console.WriteLine("difference between two sums {0}", c);
+            for (int i = 1; i <= n; i++)
+                {
+                    Console.Write("{0} ", m);
+                }
             Console.ReadLine();
+            //console.log(m.repeat(n).trim());( in JS)
         }
     }
 }
